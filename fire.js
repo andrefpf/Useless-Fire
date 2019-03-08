@@ -30,17 +30,9 @@ function cells(cellNumber){
   fill(0);
   cellCollor(cellNumber);
   noStroke();
-<<<<<<< HEAD
-  //strokeWeight(1);
   rect(x*cellSize,y*cellSize,cellSize,cellSize);
 
   pop();
-  //text(cellNumber, x*cellSize+cellSize/2, y*cellSize+cellSize/2);
-=======
-  rect(x*cellSize,y*cellSize,cellSize,cellSize);
-
-  pop();
->>>>>>> 9ec0ace38523b1d62378397ae9009bbd2eafadc0
 }
 
 function cellCollor(cellNumber){
@@ -57,11 +49,4 @@ function cellCollor(cellNumber){
   fill(cor*2,cor,0);
   collorListTemp.push(cor);
 
-<<<<<<< HEAD
-  //cor = collorList[cellNumber-1]
-
-
-
-=======
->>>>>>> 9ec0ace38523b1d62378397ae9009bbd2eafadc0
 }
