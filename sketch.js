@@ -1,17 +1,16 @@
 function setup(){
   createCanvas(400,400);
-  scale = 5;
+  scale = 20;
   cellSize = width/scale;
   collorList = [];
   collorListTemp = [];
 
+  frameRate(3);
 
 }
 
 function draw(){
   background(100);
-
-  quadradosAbaixo = 2;
 
   for(i=1;i<=scale*scale;i++){
     cells(i);
@@ -35,14 +34,17 @@ function cells(cellNumber){
   rect(x*cellSize,y*cellSize,cellSize,cellSize);
 
   pop();
-  text(cellNumber, x*cellSize+cellSize/2, y*cellSize+cellSize/2);
+  //text(cellNumber, x*cellSize+cellSize/2, y*cellSize+cellSize/2);
 }
 
 function cellCollor(cellNumber){
 
-  cor = collorList[cellNumber-1+(scale*quadradosAbaixo)]+40;
-  if(cellNumber > scale*scale-scale){
-    cor = 10;
+  quadradosAbaixo = floor(random(1,4));
+
+  cor = collorList[cellNumber-1+(scale*quadradosAbaixo)]-20;
+
+  if(cellNumber > scale*scale-scale*3){
+    cor = 150;
   }
 
 
