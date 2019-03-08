@@ -30,11 +30,9 @@ function cells(cellNumber){
   fill(0);
   cellCollor(cellNumber);
   noStroke();
-  //strokeWeight(1);
   rect(x*cellSize,y*cellSize,cellSize,cellSize);
 
   pop();
-  //text(cellNumber, x*cellSize+cellSize/2, y*cellSize+cellSize/2);
 }
 
 function cellCollor(cellNumber){
@@ -50,9 +48,5 @@ function cellCollor(cellNumber){
 
   fill(cor*2,cor,0);
   collorListTemp.push(cor);
-
-  //cor = collorList[cellNumber-1]
-
-
 
 }
