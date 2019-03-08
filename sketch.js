@@ -1,11 +1,11 @@
 function setup(){
   createCanvas(400,400);
-  scale = 20;
+  scale = 50;
   cellSize = width/scale;
   collorList = [];
   collorListTemp = [];
 
-  frameRate(3);
+  frameRate(12);
 
 }
 
@@ -29,8 +29,8 @@ function cells(cellNumber){
 
   fill(0);
   cellCollor(cellNumber);
-  stroke(0);
-  strokeWeight(2);
+  noStroke();
+  //strokeWeight(1);
   rect(x*cellSize,y*cellSize,cellSize,cellSize);
 
   pop();
@@ -41,9 +41,9 @@ function cellCollor(cellNumber){
 
   quadradosAbaixo = floor(random(1,4));
 
-  cor = collorList[cellNumber-1+(scale*quadradosAbaixo)]-20;
+  cor = collorList[cellNumber-1+(scale*quadradosAbaixo)+quadradosAbaixo]-20;
 
-  if(cellNumber > scale*scale-scale*3){
+  if(cellNumber > scale*scale-scale*4){
     cor = 150;
   }
 
