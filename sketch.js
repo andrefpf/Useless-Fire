@@ -1,25 +1,41 @@
 function setup(){
   createCanvas(400,400);
-  cellSize = width/5;
+  scale = 5;
+  cellSize = width/scale;
+
 }
 
 function draw(){
   background(100);
 
-  for(i=0;i<cellSize;i++){
-    for(j=0;j<cellSize;j++){
-      cells(i,j);
-    }
+  // for(i=0;i<scale;i++){
+  //   for(j=0;j<scale;j++){
+  //     cells(i,j);
+  //   }
+  // }
+
+  for(i=1;i<=scale*scale;i++){
+    cells(i);
   }
 }
 
-function cells(xPosition, yPosition){
+function cells(cellNumber){
+
+  x = cellNumber%scale;
+  y = ceil(cellNumber/scale)-1;
+
+
   push();
 
-  fill(200);
+  fill(255);
+  cellCollor();
   stroke(0);
   strokeWeight(2);
-  rect(xPosition*cellSize,yPosition*cellSize,cellSize,cellSize);
+  rect(x*cellSize,y*cellSize,cellSize,cellSize);
 
   pop();
+}
+
+function cellCollor(x,y){
+
 }
